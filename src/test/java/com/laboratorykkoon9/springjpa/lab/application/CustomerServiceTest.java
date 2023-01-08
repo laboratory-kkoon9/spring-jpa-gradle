@@ -11,7 +11,6 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
-import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertAll;
@@ -26,7 +25,7 @@ class CustomerServiceTest {
     private CustomerService customerService;
 
     private static final String LOGIN_ID = "eric@gmail.com";
-    private static final int givenAge = 1;
+    private static final Integer givenAge = 1;
 
     @BeforeEach
     void setUp() {
@@ -39,6 +38,7 @@ class CustomerServiceTest {
         // given
         Customer customer = Customer.builder()
                 .loginId(LOGIN_ID)
+                .age(givenAge)
                 .build();
 
         given(customerRepository.findByAge(any())).willReturn(List.of(customer));
