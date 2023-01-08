@@ -51,5 +51,6 @@ class CustomerServiceTest {
                 () -> assertThat(customers.size()).isEqualTo(1),
                 () -> assertThat(customers.get(0).getLoginId()).isEqualTo(LOGIN_ID),
                 () -> assertThat(customers.get(0).getAge()).isEqualTo(givenAge)
-        );    }
+        );
+    }
 }
