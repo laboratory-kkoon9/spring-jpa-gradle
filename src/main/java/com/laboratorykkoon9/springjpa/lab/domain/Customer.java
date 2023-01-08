@@ -29,13 +29,17 @@ public class Customer {
     private String password;
 
     @Column(name = "nickname")
-    private Long nickname;
+    private String nickname;
+
+    @Column(name = "age")
+    private Integer age;
 
     @Builder
-    public Customer(Long id, String loginId, String password, Long nickname) {
+    public Customer(Long id, String loginId, String password, String nickname, Integer age) {
         this.id = id;
         this.loginId = loginId;
         this.password = password;
         this.nickname = nickname;
+        this.age = age;
     }
 }
