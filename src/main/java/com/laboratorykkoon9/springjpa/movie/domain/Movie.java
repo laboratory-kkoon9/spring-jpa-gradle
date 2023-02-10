@@ -35,21 +35,21 @@ public class Movie {
     @Column(name = "production_year")
     private String productionYear;
 
-    @Column(name = "movie_director_name")
-    private String movieDirectorName;
+    @Column(name = "director_name")
+    private String directorName;
     @Column(name = "running_time")
     private Duration runningTime;
     @Column(name = "fee")
     private Integer fee;
 
     @Builder
-    public Movie(Long id, String movieCode, String koreaMovieName, String englishMovieName, String productionYear, String movieDirectorName, Duration runningTime, Integer fee) {
+    public Movie(Long id, String movieCode, String koreaMovieName, String englishMovieName, String productionYear, String directorName, Duration runningTime, Integer fee) {
         this.id = id;
         this.movieCode = movieCode;
         this.koreaMovieName = koreaMovieName;
         this.englishMovieName = englishMovieName;
         this.productionYear = productionYear;
-        this.movieDirectorName = movieDirectorName;
+        this.directorName = directorName;
         this.runningTime = runningTime;
         this.fee = fee;
     }
